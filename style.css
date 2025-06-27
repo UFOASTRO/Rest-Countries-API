@@ -202,13 +202,13 @@ nav.navbar {
   cursor: pointer;
   padding: 0.5rem 1.2rem;
   border-radius: 6px;
-  transition: background 0.2s;
+  transition: background 0.3s;
 }
 .dark-mode-btn:hover, .dark-mode-btn:focus {
   background: #f0f0f0;
 }
 .back-btn-row {
-  margin: 2.5rem 0 2.5rem 3rem;
+  margin: 2.5rem 
 }
 .back-btn {
   display: inline-flex;
@@ -261,9 +261,6 @@ nav.navbar {
   min-width: 320px;
   min-height: 220px;
   max-width: 520px;
-  background: #202c37;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
   padding: 2rem;
 }
 .country-flag-large {
@@ -303,16 +300,16 @@ nav.navbar {
   gap: 1.1rem;
   min-width: 180px;
 }
-.meta-label {
+.meta-label.dark-mode {
   font-size: 1rem;
   font-weight: 600;
-  color: #f7f7f7;
+  color: #232E39;
   margin-right: 0.3rem;
 }
-.meta-value {
+.meta-value.dark-mode {
   font-size: 1rem;
   font-weight: 400;
-  color: #e0e0e0;
+  color: #232E39;
 }
 .bento-borders {
   margin-top: 1.5rem;
