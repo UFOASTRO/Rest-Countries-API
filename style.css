@@ -208,7 +208,7 @@ nav.navbar {
   background: #f0f0f0;
 }
 .back-btn-row {
-  margin: 1.2rem 0 1.2rem 2rem;
+  margin: 2.5rem 0 2.5rem 3rem;
 }
 .back-btn {
   display: inline-flex;
@@ -233,14 +233,13 @@ nav.navbar {
   min-height: calc(100vh - 80px);
   width: 100vw;
   overflow-x: hidden;
-  padding-bottom: 1rem;
-  padding-top: 0.5rem;
+  padding-bottom: 2rem;
 }
 .country-detail-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.2rem;
+  padding: 2rem;
   box-sizing: border-box;
 }
 .country-detail-bento {
@@ -251,7 +250,7 @@ nav.navbar {
   align-items: flex-start;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1.2rem 1.5rem;
+  padding: 2rem 3rem;
   background: none;
 }
 .bento-flag {
@@ -346,7 +345,7 @@ nav.navbar {
   .country-detail-bento {
     flex-direction: column;
     gap: 2.5rem;
-    padding: 0.7rem 0.2rem;
+    padding: 1.5rem 0.5rem;
   }
   .bento-flag, .bento-info {
     min-width: 0;
@@ -367,11 +366,10 @@ nav.navbar {
     padding: 1.2rem 1rem 1rem 1rem;
   }
   .back-btn-row {
-    margin: 0.7rem 0 0.7rem 0.7rem;
+    margin: 1.2rem 0 1.2rem 1rem;
   }
   .country-detail-main {
-    padding-bottom: 1rem;
-    padding-top: 0.2rem;
+    padding-bottom: 2rem;
   }
   .bento-info {
     gap: 1.2rem;
