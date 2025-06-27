@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REST Countries API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="header">Where in the world?</div>
+        <button id="dark-mode-button" class="dark-mode-btn">
+            <span class="icon moon-icon" aria-hidden="true">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" />
+                </svg>
+            </span>
+            Dark Mode
+        </button>
+    </nav>
+    <main>
+        <div class="userInputs controls">
+            <div class="searchBox">
+                <label for="search" class="visually-hidden">Search</label>
+                <div class="input-icon-group">
+                    <span class="icon search-icon" aria-hidden="true">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                    </span>
+                    <input type="search" name="search" id="search" placeholder="Search for a country..." autocomplete="off">
+                </div>
+            </div>
+            <div class="filter">
+                <div class="input-icon-group">
+                    <span class="icon filter-icon" aria-hidden="true">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <polygon points="3 4 21 4 14 14 14 20 10 20 10 14 3 4" />
+                        </svg>
+                    </span>
+                    <select name="filterInput" id="filterInput" class="custom-select">
+                        <option value="" disabled selected>Filter by Region</option>
+                        <option value="all">All countries</option>
+                        <option value="africa">Africa</option>
+                        <option value="europe">Europe</option>
+                        <option value="asia">Asia</option>
+                        <option value="america">America</option>
+                        <option value="oceania">Oceania</option>
+                        <option value="australia">Australia</option>
+                    </select>
+                </div>
+            </div>
+            <div class="sort">
+                <div class="input-icon-group">
+                    <span class="icon sort-icon" aria-hidden="true">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                            <path d="M3 18h6M3 6h18M3 12h12" />
+                        </svg>
+                    </span>
+                    <select id="sort-population" class="custom-select">
+                        <option value="" disabled selected>Sort by Population</option>
+                        <option value="asc">Population: Low to High</option>
+                        <option value="desc">Population: High to Low</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="countries-list" class="countries-list"></div>
+        <button id="load-more" class="load-more">Load More</button>
+    </main>
+    <div id="country-modal" class="modal hidden"></div>
+    <script src="script.js"></script>
+    <script>
+        // Dark mode toggle for homepage
+        const darkModeBtn = document.getElementById('dark-mode-button');
+        if (darkModeBtn) {
+            darkModeBtn.onclick = () => {
+                document.body.classList.toggle('dark-mode');
+                localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+            };
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+        }
+    </script>
+</body>
+
+</html>
